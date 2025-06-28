@@ -47,15 +47,15 @@ const Navbar = () => {
     <div className="relative ">
       {/* Fixed navbar */}
       <div className="fixed top-0 left-0 w-full z-50 bg-[#1c1f26]  text-[#C4CFDE] shadow-md main-font">
-        <div className=" container mx-auto flex justify-between items-center px-6 py-6">
+        <div className="  container xl:w-9/12 mx-auto flex justify-between items-center px-6 py-6">
           {/* Logo */}
-          <img src="/logo.png" alt="" className="w-12" />
+          <img src="/logo.png" alt="" className="w-15" />
          
 
           {/* Desktop menu */}
           <nav className="hidden md:flex gap-6">{links}</nav>
 
-          <button className= " text-[18px] text-[#FF014F] bg-[#24272e] px-6 py-4 rounded-xl shadow-lg  hidden md:flex">Resume</button>
+          <button className= " text-[18px] border text-pink-600 bg-[#24272e] px-6 py-3 rounded-xl shadow-lg  hidden md:flex">Resume</button>
 
           {/* Mobile menu button */}
           <button onClick={() => setIsOpen(true)} className="md:hidden">

@@ -1,0 +1,71 @@
+import React from "react";
+
+const MyEducation = () => {
+  const education = [
+    {
+      degree: "BSc in Statistics ",
+      institution: "National University",
+      year: "2021 – still now",
+      description:
+        "The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture.",
+      grade: "3.64/4",
+    },
+    {
+      degree: " Higher Secondary Education",
+      institution: "shymnagar goverment mohsin college",
+      year: "2019 – 2021",
+      description:
+        "Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education.",
+      grade: "5.00/5",
+    },
+    {
+      degree: "Secondary  Education",
+      institution: "tripani vidyapith Munshigonj",
+      year: "2014 – 2019",
+      description:
+        "Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale.",
+      grade: "5.00/5",
+    },
+  ];
+
+  return (
+    <div className="bg-[#1c1f26] text-white  md:px-0 py-12">
+      
+      <h1 className="text-pink-600 text-xl mb-2 uppercase">2008 – still now</h1>
+      <h1 className="text-[42px] md:text-5xl lg:text-6xl text-[#C4CFDE] font-bold mb-10 uppercase">
+        Education
+      </h1>
+
+      {/* Vertical Timeline Container */}
+      <div className="relative border-l border-gray-700 pl-6 px-4 space-y-10">
+        {education.map((edu, index) => (
+          <div key={index} className="relative">
+           
+            <span className="absolute -left-[14px] md:-left-[11px] top-2 w-3 h-3 bg-pink-600 rounded-full border border-white"></span>
+
+          
+            <div className="bg-[#2c2f3f] p-6 rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 relative">
+              
+              <div className="absolute top-4 right-4 bg-pink-600 text-white text-sm font-bold px-3 py-1 rounded shadow">
+                {edu.grade}
+              </div>
+
+           
+              <h3 className="text-xl font-semibold text-white mb-1 uppercase">
+                {edu.degree}
+              </h3>
+              <p className="text-sm text-gray-400 uppercase mb-2">
+                {edu.institution} ({edu.year})
+              </p>
+              <p className="text-gray-300 text-sm border-t border-gray-600 pt-3 leading-relaxed">
+                {edu.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default MyEducation;

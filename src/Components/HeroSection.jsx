@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 const HeroSection = () => {
   return (
     <div className=" min-h-[calc(100vh-100px)] bg-[#1c1f26] text-white flex items-center justify-center pt-32 px-4">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-center px-6">
+      <div className=" container xl:w-9/12 mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-center px-6">
         
         {/* Left Content */}
         <div className="">
@@ -35,6 +35,8 @@ const HeroSection = () => {
             I use animation as a third dimension by which to simplify experiences and guide through
             each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that matter.
           </p>
+
+            <button className= " text-[18px] mt-10 border text-pink-600 bg-[#24272e] px-6 py-4 rounded-xl shadow-lg  ">Resume</button>
 
           {/* Social + Skills */}
           <div className="mt-10 flex flex-col md:flex-row gap-10  md:items-start">
