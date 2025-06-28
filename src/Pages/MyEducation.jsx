@@ -29,7 +29,7 @@ const MyEducation = () => {
   ];
 
   return (
-    <div className="bg-[#1c1f26] text-white  md:px-0 py-12">
+    <div className="bg-[#1c1f26] text-white  md:px-0 py-20">
       
       <h1 className="text-pink-600 text-xl mb-2 uppercase">2008 – still now</h1>
       <h1 className="text-[42px] md:text-5xl lg:text-6xl text-[#C4CFDE] font-bold mb-10 uppercase">

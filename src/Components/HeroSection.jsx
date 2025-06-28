@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 const HeroSection = () => {
   return (
     <div className=" min-h-[calc(100vh-100px)] bg-[#1c1f26] text-white flex items-center justify-center pt-32 px-4">
-      <div className=" container xl:w-9/12 mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-center px-6">
+      <div className=" container xl:w-8/12 mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-center px-6">
         
         {/* Left Content */}
         <div className="">
@@ -36,7 +36,7 @@ const HeroSection = () => {
             each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that matter.
           </p>
 
-            <button className= " text-[18px] mt-10 border text-pink-600 bg-[#24272e] px-6 py-4 rounded-xl shadow-lg  ">Resume</button>
+            <button className= " uppercase text-[18px] mt-10 border border-pink-600 bg-[#24272e] px-6 py-4 rounded-xl shadow-lg  hover:bg-pink-600 hover:scale-105 transition ">Resume</button>
 
           {/* Social + Skills */}
           <div className="mt-10 flex flex-col md:flex-row gap-10  md:items-start">
@@ -45,13 +45,13 @@ const HeroSection = () => {
             <div>
               <p className="text-sm tracking-widest text-gray-400 uppercase mb-3">Find with me</p>
               <div className="flex gap-4 justify-start">
-                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:scale-105 transition">
+                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
                   <FaFacebookF className="text-xl text-white" />
                 </div>
-                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:scale-105 transition">
+                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
                   <FaTwitter className="text-xl text-white" />
                 </div>
-                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:scale-105 transition">
+                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
                   <FaLinkedinIn className="text-xl text-white" />
                 </div>
               </div>
