@@ -19,7 +19,7 @@ const MySkiles = () => {
  
 ];
     return (
-        <div className='my-40'>
+        <div id='Skiles' className=' py-30 md:py-36 '>
             <h1 className='text-pink-600 main-font text-xl mb-3 uppercase'>Features</h1>
             <h1 className=' text-5xl lg:text-6xl xl:text-7xl text-[#C4CFDE] font-bold main-font mb-5 uppercase '>My Skills</h1>
             <p className='text-gray-400 md:w-3/4 '>I have hands-on experience with modern frontend technologies, focusing on clean design and responsive web development. I love working with tools like React, Tailwind CSS, and Firebase to build dynamic and user-friendly websites. My skillset is always growing as I explore new frameworks and improve every day.</p>

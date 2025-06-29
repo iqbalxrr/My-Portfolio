@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <section className="my-20">
-      <div className=" md:flex  gap-12">
+    <section id="about" className=" py-32 md:py-40">
+      <div className=" md:flex  gap-10">
         {/* Image or Illustration */}
         <div className="md:w-1/3 flex justify-center">
           <img

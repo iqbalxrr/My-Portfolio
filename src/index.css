@@ -3,6 +3,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+.active-link {
+  @apply text-pink-600 font-semibold border-b-2 border-pink-600;
+}
 
 .main-font {
   font-family: "Montserrat", sans-serif;
@@ -14,3 +17,4 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
+

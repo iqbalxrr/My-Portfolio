@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter, FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const ContactUsPage = () => {
@@ -27,7 +27,7 @@ const ContactUsPage = () => {
   };
 
   return (
-    <div className=" py-12 main-font">
+    <div id="contact" className=" py-26 md:py-36 main-font">
       <div className="my-12">
         <h4 className=" text-center text-pink-600 main-font text-xl mb-3 uppercase">Contact</h4>
       <h2 className="text-5xl text-center lg:text-6xl text-[#C4CFDE] font-bold main-font mb-5 uppercase">Contact With Me</h2>
@@ -51,7 +51,7 @@ const ContactUsPage = () => {
             <span className="text-pink-600">+8801300261329</span>
           </p>
           <p className="text-sm">
-            <span className="font-semibold  text-gray-200">Email:</span>{" "}
+            <span className="font-semibold  text-gray-200">Email :</span>{" "}
             <a href="mailto:iqbal.hasan.webdev@gmail.com" className="text-pink-600 overflow-hidden  text-[13px] md:text-base">
               iqbal.hasan.webdev@gmail.com
             </a>
@@ -59,14 +59,17 @@ const ContactUsPage = () => {
 
           <p className="text-sm mt-5 mb-2 text-gray-400">Find with me</p>
           <div className="flex flex-wrap gap-3">
-            <a href="#" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
+            <a href="https://x.com/WebdevIqbal" target="_blank" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
               <FaTwitter />
             </a>
-            <a href="#" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
+            <a href="https://www.facebook.com/tasnim.hasan.iqbal" target="_blank" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
               <FaFacebookF />
             </a>
-            <a href="#" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
+            <a href="https://www.linkedin.com/in/iqbal-hasan-91a1a5365" target="_blank" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
               <FaLinkedinIn />
+            </a>
+            <a href="https://wa.me/qr/YZ22LZAZUPEBG1" target="_blank" className="bg-[#2c2e38] p-3 rounded-lg hover:bg-pink-600 transition">
+              <FaWhatsapp />
             </a>
           </div>
         </div>

@@ -1,10 +1,10 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 
 const HeroSection = () => {
   return (
-    <div className=" min-h-[calc(100vh-100px)] bg-[#1c1f26] text-white flex items-center justify-center pt-32 px-4">
+    <div id="home" className=" min-h-[calc(100vh-100px)] bg-[#1c1f26] text-white flex items-center justify-center pt-32 px-4">
       <div className=" container xl:w-8/12 mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-center px-6">
         
         {/* Left Content */}
@@ -32,8 +32,7 @@ const HeroSection = () => {
             
           </h1>
           <p className="text-gray-400 max-w-lg mx-auto md:mx-0">
-            I use animation as a third dimension by which to simplify experiences and guide through
-            each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that matter.
+            I’m a passionate and dedicated web developer and designer who loves to build creative, user-friendly experiences using modern web technologies. I always strive to learn and improve with every project I take on.
           </p>
 
             <button className= " uppercase text-[18px] mt-10 border border-pink-600 bg-[#24272e] px-6 py-4 rounded-xl shadow-lg  hover:bg-pink-600 hover:scale-105 transition ">Resume</button>
@@ -46,14 +45,20 @@ const HeroSection = () => {
               <p className="text-sm tracking-widest text-gray-400 uppercase mb-3">Find with me</p>
               <div className="flex gap-4 justify-start">
                 <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
-                  <FaFacebookF className="text-xl text-white" />
+                 <a href="https://github.com/iqbalxrr" target="_blank"> <FaGithub className="text-xl text-white" /> </a> 
                 </div>
                 <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
-                  <FaTwitter className="text-xl text-white" />
+                 <a href="https://www.linkedin.com/in/iqbal-hasan-91a1a5365" target="_blank"> <FaLinkedinIn className="text-xl text-white" /> </a> 
                 </div>
+
                 <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
-                  <FaLinkedinIn className="text-xl text-white" />
+                  <a href="https://x.com/WebdevIqbal" target="_blank"> <FaTwitter className="text-xl text-white" /> </a>
                 </div>
+                
+                <div className="bg-[#24272e] p-4 rounded-xl shadow-lg hover:bg-pink-600 hover:scale-105 transition">
+                 <a href="https://www.facebook.com/tasnim.hasan.iqbal" target="_blank"> <FaFacebookF className="text-xl text-white" /> </a>  
+                </div>
+                
               </div>
             </div>
 

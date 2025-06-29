@@ -1,6 +1,6 @@
 
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -17,15 +17,18 @@ const Footer = () => {
             />
             <span className="text-lg font-semibold">IQBAL</span>
           </div>
-          <div className="flex gap-4 mt-2">
+          <div className="flex gap-4 mt-2 text-white">
             <a href="#" className="bg-gray-800 hover:bg-pink-600 p-3 rounded shadow-lg transition">
               <FaFacebookF />
             </a>
             <a href="#" className="bg-gray-800 hover:bg-pink-600 p-3 rounded shadow-lg transition">
               <FaTwitter />
             </a>
-            <a href="#" className="bg-gray-800 hover:bg-pink-600 p-3 rounded shadow-lg transition">
+            <a href="" className="bg-gray-800 hover:bg-pink-600 p-3 rounded shadow-lg transition">
               <FaLinkedinIn />
+            </a>
+            <a href="https://wa.me/qr/YZ22LZAZUPEBG1" target="_blank" className="bg-gray-800 p-3 rounded-lg hover:bg-pink-600 transition">
+              <FaWhatsapp />
             </a>
           </div>
         </div>
