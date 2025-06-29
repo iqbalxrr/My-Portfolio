@@ -2,6 +2,7 @@
 
 import Footer from './Components/Footer'
 import HeroSection from './Components/HeroSection'
+import HireNotification from './Components/HireNotification'
 import Navber from './Components/Navber'
 import AboutPage from './Pages/AboutPage'
 import ContactUsPage from './Pages/ContactUsPage'
@@ -23,6 +24,7 @@ function App() {
           <MyProjects></MyProjects>
           <ContactUsPage></ContactUsPage>
           <Footer></Footer>
+          <HireNotification></HireNotification>
      </div>
    
     </div>
