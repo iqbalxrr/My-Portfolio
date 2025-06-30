@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <div className=''>
+    <div className='overflow-x-hidden'>
      <Navber></Navber>
      <HeroSection></HeroSection>
      <div className='container xl:w-8/12 mx-auto px-6 py-6'>

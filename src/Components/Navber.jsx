@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaDownload, FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-scroll";
@@ -23,7 +23,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           spy={true}
-          offset={-80} 
+          offset={-80}
           activeClass="active-link"
           className="cursor-pointer hover:text-pink-600 transition"
           onClick={() => setIsOpen(false)}
@@ -35,9 +35,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="relative ">
+    <div className="relative overflow-x-hidden">
       {/* Fixed navbar */}
-      <div className="fixed top-0 left-0 w-full z-50 bg-[#1c1f26] md:text-sm lg:text-base uppercase text-white shadow-md main-font">
+      <div className="fixed top-0  left-0 w-full z-50 bg-[#1c1f26] md:text-sm lg:text-base uppercase text-white shadow-md main-font">
         <div className="  container xl:w-8/12 mx-auto flex justify-between items-center px-6 py-6">
           {/* Logo */}
           <img src="/logo.png" alt="" className="w-15" />
@@ -46,11 +46,23 @@ const Navbar = () => {
           {/* Desktop menu */}
           <nav className="hidden md:flex gap-6">{links}</nav>
 
-          <button className="  text-[18px] border border-pink-600 bg-[#24272e] px-6 py-3  rounded-xl shadow-lg hover:scale-105 transition hover:bg-pink-600 uppercase  hidden md:flex">Resume</button>
-
+          <button
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/resume.pdf";
+              link.download = "IQBAL_HASAN_Resume.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+            className="text-[18px] border border-pink-600 bg-[#24272e] px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition hover:bg-pink-600 uppercase hidden md:flex items-center gap-2"
+          >
+            Resume
+            <FaDownload className="text-white" />
+          </button>
           {/* Mobile menu button */}
           <button onClick={() => setIsOpen(true)} className="md:hidden">
-            <FiMenu size={24} />
+            <FiMenu size={30} />
           </button>
         </div>
       </div>

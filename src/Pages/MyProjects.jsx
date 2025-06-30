@@ -1,10 +1,17 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaExternalLinkAlt, FaGithub ,  FaInfoCircle  } from "react-icons/fa";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MyProjects = () => {
+
+    useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
     const projectData = [
         {
             id: 1,
@@ -65,14 +72,15 @@ const MyProjects = () => {
 
     return (
         <div id="projects" className="py-30 " >
-            <h3 className='text-pink-600 main-font text-[18px] mb-3 uppercase'>Visit and Give Feedback</h3>
-            <h1 className=' text-5xl lg:text-6xl xl:text-7xl text-[#C4CFDE] font-bold main-font mb-5 uppercase ' >My Projects</h1>
+            <h3 className='text-pink-600 main-font text-[16px] mb-2 uppercase' data-aos="fade-right">Visit and Give Feedback</h3>
+            <h1 className=' text-5xl lg:text-6xl xl:text-7xl text-[#C4CFDE] font-bold main-font mb-5 uppercase ' data-aos="fade-left" >My Projects</h1>
            <div className=" flex flex-col gap-8 pt-20">
-             {projectData.map((project) => (
+             {projectData.map((project , i ) => (
                 
                 <div
                     key={project.id}
-                    className="flex flex-col md:flex-row bg-[#24272e] text-white  rounded-xl shadow-lg mg:gap-5  overflow-hidden"
+                    className={`flex flex-col md:flex-row bg-[#24272e] text-white  rounded-xl shadow-lg mg:gap-5  overflow-hidden ` }
+                    data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
                 >
                     {/* Left Image Slider */}
                     <div className="w-full md:w-1/2">

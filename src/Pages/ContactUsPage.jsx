@@ -1,8 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactUsPage = () => {
+
+    useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const form = useRef();
   const [successMsg, setSuccessMsg] = useState("");
 
@@ -16,12 +23,12 @@ const ContactUsPage = () => {
         "9uE20SEf3cRkaicQx" // replace
       )
       .then(
-        () => {
-          setSuccessMsg("Your message has been sent successfully!");
+         () => {
+          setSuccessMsg("✅ Your message has been sent successfully!");
           form.current.reset();
         },
         () => {
-          setSuccessMsg("Something went wrong. Please try again.");
+          setSuccessMsg("❌ Something went wrong. Please try again.");
         }
       );
   };
@@ -29,13 +36,13 @@ const ContactUsPage = () => {
   return (
     <div id="contact" className=" py-26 md:py-36 main-font">
       <div className="my-12">
-        <h4 className=" text-center text-pink-600 main-font text-xl mb-3 uppercase">Contact</h4>
-      <h2 className="text-5xl text-center lg:text-6xl text-[#C4CFDE] font-bold main-font mb-5 uppercase">Contact With Me</h2>
+        <h4 className=" text-center text-pink-600 main-font text-[16px] mb-2 uppercase"data-aos="fade-down">Contact</h4>
+      <h2 className="text-5xl text-center lg:text-6xl text-[#C4CFDE] font-bold main-font mb-5 uppercase" data-aos="fade-up">Contact With Me</h2>
       </div>
 
       <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#23252e] p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg">
         {/* Left - Profile Card */}
-        <div className="bg-[#1e2028] rounded-xl p-4 sm:p-6">
+        <div className="bg-[#1e2028] rounded-xl p-4 sm:p-6" data-aos="fade-right">
           <img
             src="/contact1.png"
             alt="Profile"
@@ -75,9 +82,9 @@ const ContactUsPage = () => {
         </div>
 
         {/* Right - Contact Form */}
-        <div>
+        <div data-aos="fade-left">
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" >
               <input
                 type="text"
                 name="user_name"
@@ -121,7 +128,10 @@ const ContactUsPage = () => {
               SEND MESSAGE
             </button>
             {successMsg && (
-              <p className="text-green-400 mt-4">{successMsg}</p>
+              <p className={`mt-4 text-center text-sm ${successMsg.includes("✅") ? "text-green-400" : "text-red-400"}`}>
+                {successMsg}
+              </p>
+              
             )}
           </form>
         </div>

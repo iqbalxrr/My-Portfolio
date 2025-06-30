@@ -5,10 +5,10 @@ const HireNotification = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Show after 1 second on page load
+
     const timer = setTimeout(() => {
       setVisible(true);
-    }, 1000);
+    }, 6000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -17,25 +17,25 @@ const HireNotification = () => {
 
   return (
     <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 z-50">
-      <div className="bg-gradient-to-r from-purple-800 via-pink-600 to-black text-white p-5 rounded-xl shadow-xl flex items-center gap-5 relative w-[350px] md:w-[420px] animate-slideUp">
-        {/* Close Button */}
+      <div className=" bg-[#1c1f26] border border-amber-50 text-white px-3 md:px-5  py-7 rounded-xl shadow-xl flex items-center gap-2 md:gap-4 relative w-[305px] md:w-[420px] animate-slideUp">
+
         <button
           onClick={() => setVisible(false)}
-          className="absolute top-2 right-2 text-pink-300 hover:text-white"
+          className="absolute top-2 right-2 text-pink-600 hover:text-white"
         >
-          <IoMdClose size={20} />
+          <IoMdClose size={25} />
         </button>
 
-        {/* Profile Image */}
+
         <img
-          src="https://i.ibb.co/JR9CtjF/avatar.png" // Replace with your image
+          src="/logo22.jpg"
           alt="profile"
           className="w-14 h-14 rounded-full border-2 border-white"
         />
 
-        {/* Text Content */}
+
         <div className="flex-1">
-          <h3 className="text-sm md:text-base font-bold leading-snug">
+          <h3 className="text-sm md:text-base font-semibold leading-snug">
             I'm Iqbal Hasan — available for hire
           </h3>
           <p className="text-xs text-gray-300 mt-1">
@@ -43,10 +43,10 @@ const HireNotification = () => {
           </p>
         </div>
 
-        {/* CTA Button */}
+
         <a
           href="#contact"
-          className="bg-[#2e2e3a] text-white text-sm px-4 py-2 rounded-md hover:bg-pink-600 transition"
+          className=" bg-pink-600 text-white text-sm px-4 py-2 rounded-md hover:bg-white hover:text-black transition"
         >
           Hire me
         </a>

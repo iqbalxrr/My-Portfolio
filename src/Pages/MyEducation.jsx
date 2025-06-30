@@ -1,6 +1,14 @@
-import React from "react";
+
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MyEducation = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const education = [
     {
       degree: "BSc in Statistics ",
@@ -30,27 +38,30 @@ const MyEducation = () => {
 
   return (
     <div id="education" className="bg-[#1c1f26] text-white  md:px-0 py-40 md:py-48">
-      
-      <h1 className="text-pink-600 text-xl mb-2 uppercase">2008 – still now</h1>
-      <h1 className="text-[42px] md:text-5xl lg:text-6xl text-[#C4CFDE] font-bold mb-10 uppercase">
+
+      <h1 className="text-pink-600 text-[16px] mb-2 uppercase" data-aos="fade-right">2008 – still now</h1>
+      <h1 className="text-[42px] md:text-5xl lg:text-6xl text-[#C4CFDE] font-bold mb-10 uppercase" data-aos="fade-left">
         Education
       </h1>
 
       {/* Vertical Timeline Container */}
-      <div className="relative border-l border-gray-700 pl-6 px-4 space-y-10">
+      <div className="relative border-l  pl-6 px-4 space-y-10">
         {education.map((edu, index) => (
-          <div key={index} className="relative">
-           
+          <div key={index}
+          data-aos="fade-up"
+           data-aos-delay={index * 150}
+           className="relative">
+
             <span className="absolute -left-[14px] md:-left-[11px] top-2 w-3 h-3 bg-pink-600 rounded-full border border-white"></span>
 
-          
-            <div className="bg-[#2c2f3f] p-6 rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 relative">
-              
+
+            <div className="bg-[#2d2e35] p-6 rounded-xl shadow-md hover:shadow-pink-600 transition-transform hover:-translate-y-1 duration-300 relative">
+
               <div className="absolute top-4 right-4 bg-pink-600 text-white text-sm font-bold px-3 py-1 rounded shadow">
                 {edu.grade}
               </div>
 
-           
+
               <h3 className="text-xl font-semibold text-white mb-1 uppercase">
                 {edu.degree}
               </h3>
